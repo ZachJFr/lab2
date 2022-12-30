@@ -61,6 +61,13 @@ p {
   outline-offset: 15px;
 }
 
+h1 {
+  text-shadow: 2px 2px red;
+  text-align: justify;
+  background-color: black;
+  color: white;
+}
+
 p.ex5 {
 	outline: thick ridge pink;
 }
@@ -69,11 +76,25 @@ h2 {
 }
 
 h3 {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+
+h3 {
   height: 200px;
   width: 50%;
   background-color: powderblue;
 }
+h4.ex1 {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+  text-decoration: line-through;
+  text-transform: capitalize;
+}
 
+p.small {
+  line-height: 0.7;
+}
 </style>
 </head>
 
@@ -106,7 +127,9 @@ h3 {
 <p class="ex3">A thick outline.</p>
 <p class="ex4">An outset grey outline.</p>
 <p class="ex5">A thick ridge pink outline.</p>
+<p class="small">This is a paragraph with a smaller line-height.</p>
 <p>This paragraph has an outline of 15px outside the border edge.</p>
+<h4 class="ex1"> Racecar</h4>
 </body>
 </html>
 
