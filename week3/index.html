@@ -1,97 +1,67 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>CSS Website Layout</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-img {
-  float: right;
+#demo {color: blue;}
+h5.test {color: green;} 
+[title~=flower] {
+  border: 5px solid yellow;
 }
-p.clearfix {
-  overflow: auto;
+div > p {
+  background-color: yellow;
 }
-.center {
-  text-align: center;
-  border: 3px solid green;
+h3::first-line {
+  color: #ff0000;
+  font-variant: small-caps;
 }
-div {
-  background-color: coral;
-  width: 200px;
-  height: 65px;
-  border: 1px solid black;
-  overflow-x: hidden;
-  overflow-y: scroll;
-}
-span.a {
-  display: inline; /* the default for span */
-  width: 100px;
-  height: 100px;
-  padding: 5px;
-  border: 1px solid blue;  
-  background-color: yellow; 
+a:link {
+  color: red;
 }
 
-span.b {
-  display: inline-block;
-  width: 100px;
-  height: 100px;
-  padding: 5px;
-  border: 1px solid blue;    
-  background-color: yellow; 
+/* visited link */
+a:visited {
+  color: green;
 }
 
-span.c {
-  display: block;
-  width: 100px;
-  height: 100px;
-  padding: 5px;
-  border: 1px solid blue;    
-  background-color: yellow; 
-}
-h1 {
-  background-color: #4CAF50;
-  padding: 10px;
+/* mouse over link */
+a:hover {
+  color: hotpink;
 }
 
-h1.first {
-  opacity: 0.1;
-}
-
-h2.second {
-  opacity: 0.3;
-}
-
-h3.third {
-  opacity: 0.6;
-}
-h4.header {
-  background-color: #f1f1f1;
-  padding: 20px;
-  text-align: center;
+/* selected link */
+a:active {
+  color: blue;
 }
 </style>
 </head>
 <body>
 
-<h4>The display Property</h4>
+<h2>Child Selector</h2>
 
-<h5>display: inline</h5>
-<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat scelerisque elit sit amet consequat. Aliquam erat volutpat. <span class="a">Aliquam</span> <span class="a">venenatis</span> gravida nisl sit amet facilisis. Nullam cursus fermentum velit sed laoreet. </div>
+<p>The child selector (>) selects all elements that are the children of a specified element.</p>
 
-<h5>display: inline-block</h5>
-<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat scelerisque elit sit amet consequat. Aliquam erat volutpat. <span class="b">Aliquam</span> <span class="b">venenatis</span> gravida nisl sit amet facilisis. Nullam cursus fermentum velit sed laoreet. </div>
+<div>
+  <p>Paragraph 1 in the div.</p>
+  <p>Paragraph 2 in the div.</p>
+  <section>
+    <!-- not Child but Descendant -->
+    <p>Paragraph 3 in the div (inside a section element).</p>
+  </section>
+  <p>Paragraph 4 in the div.</p>
+</div>
 
-<h6>display: block</h6>
-<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat scelerisque elit sit amet consequat. Aliquam erat volutpat. <span class="c">Aliquam</span> <span class="c">venenatis</span> gravida nisl sit amet facilisis. Nullam cursus fermentum velit sed laoreet. </div>
-<p class="center"> This text is centered.</p>
-<h1 class="first"><p>opacity 0.1</p></h1>
-<h2 class="second"><p>opacity 0.3</p></h2>
-<h3 class="third"><p>opacity 0.6</p></h3>
-<p class "clearfix"><img src="https://vignette.wikia.nocookie.net/spongebob/images/a/a0/SpongeBob's_pineapple_house_in_Season_2-1.png/revision/latest?cb=20150425071521" alt="Pineapple" style="width:170px;height:170px;margin-left:15px;">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.</p>
-
+<p>Paragraph 5. Not in a div.</p>
+<p>Paragraph 6. Not in a div.</p>
+<h2>Styling a link depending on state</h2>
+<h3>You can use the ::first-line pseudo-element to add a special effect to the first line of a text. Some more text. And even more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more.</h3>
+<p><b><a href="default.asp" target="_blank">This is a link</a></b></p>
+<p><b>Note:</b> a:hover MUST come after a:link and a:visited in the CSS definition in order to be effective.</p>
+<p><b>Note:</b> a:active MUST come after a:hover in the CSS definition in order to be effective.</p>
+<h4>All images with the title attribute containing the word "flower" get a yellow border.</h4>
+<img src="https://www.w3schools.com/css/klematis.jpg" title="klematis flower" width="150" height="113">
+<img src="https://www.w3schools.com/css/img_flwr.gif" title="flower" width="224" height="162">
+<img src="https://www.w3schools.com/css/img_tree.gif" title="tree" width="200" height="358">
+<h5 id="demo" class="test">Hello World!</h5>
 </body>
 </html>
-
 
