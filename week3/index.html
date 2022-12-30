@@ -2,34 +2,45 @@
 <html>
 <head>
 <style>
-/* unvisited link */
-a:link {
-  color: red;
+ol {
+  background: #ff9999;
+  padding: 20px;
 }
 
-/* visited link */
-a:visited {
-  color: green;
+ul {
+  background: #3399ff;
+  padding: 20px;
 }
 
-/* mouse over link */
-a:hover {
-  color: hotpink;
+ol li {
+  background: #ffe5e5;
+  color: darkred;
+  padding: 5px;
+  margin-left: 35px;
 }
 
-/* selected link */
-a:active {
-  color: blue;
+ul li {
+  background: #cce5ff;
+  color: darkblue;
+  margin: 5px;
 }
 </style>
 </head>
 <body>
 
-<h2>Styling a link depending on state</h2>
+<h1>Styling Lists With Colors</h1>
 
-<p><b><a href="default.asp" target="_blank">This is a link</a></b></p>
-<p><b>Note:</b> a:hover MUST come after a:link and a:visited in the CSS definition in order to be effective.</p>
-<p><b>Note:</b> a:active MUST come after a:hover in the CSS definition in order to be effective.</p>
+<ol>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ol>
+
+<ul>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ul>
 
 </body>
 </html>
