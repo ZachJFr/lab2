@@ -1,62 +1,87 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>CSS Website Layout</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-table, td, th {
+.center {
+  text-align: center;
+  border: 3px solid green;
+}
+div {
+  background-color: coral;
+  width: 200px;
+  height: 65px;
   border: 1px solid black;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+span.a {
+  display: inline; /* the default for span */
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+  border: 1px solid blue;  
+  background-color: yellow; 
 }
 
-table {
-  border-collapse: collapse;
-  width: 100%;
+span.b {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+  border: 1px solid blue;    
+  background-color: yellow; 
 }
 
-th {
-  height: 70px;
+span.c {
+  display: block;
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+  border: 1px solid blue;    
+  background-color: yellow; 
+}
+h1 {
+  background-color: #4CAF50;
+  padding: 10px;
 }
 
-td {
-  height: 50px;
-  vertical-align: bottom;
+h1.first {
+  opacity: 0.1;
 }
-tr:hover {background-color: coral;}
 
+h2.second {
+  opacity: 0.3;
+}
+
+h3.third {
+  opacity: 0.6;
+}
+h4.header {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+}
 </style>
 </head>
 <body>
 
-<h2>The width and height Properties</h2>
+<h4>The display Property</h4>
 
-<p>Set the width of the table, and the height of the table header row:</p>
+<h5>display: inline</h5>
+<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat scelerisque elit sit amet consequat. Aliquam erat volutpat. <span class="a">Aliquam</span> <span class="a">venenatis</span> gravida nisl sit amet facilisis. Nullam cursus fermentum velit sed laoreet. </div>
 
-<table>
-  <tr>
-    <th>Firstname</th>
-    <th>Lastname</th>
-    <th>Savings</th>
-  </tr>
-  <tr>
-    <td>Peter</td>
-    <td>Griffin</td>
-    <td>$100</td>
-  </tr>
-  <tr>
-    <td>Lois</td>
-    <td>Griffin</td>
-    <td>$150</td>
-  </tr>
-  <tr>
-    <td>Joe</td>
-    <td>Swanson</td>
-    <td>$300</td>
-  </tr>
-  <tr>
-    <td>Cleveland</td>
-    <td>Brown</td>
-    <td>$250</td>
-  </tr>
-</table>
+<h5>display: inline-block</h5>
+<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat scelerisque elit sit amet consequat. Aliquam erat volutpat. <span class="b">Aliquam</span> <span class="b">venenatis</span> gravida nisl sit amet facilisis. Nullam cursus fermentum velit sed laoreet. </div>
 
+<h6>display: block</h6>
+<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat scelerisque elit sit amet consequat. Aliquam erat volutpat. <span class="c">Aliquam</span> <span class="c">venenatis</span> gravida nisl sit amet facilisis. Nullam cursus fermentum velit sed laoreet. </div>
+<p class="center"> This text is centered.</p>
+<h1 class="first"><p>opacity 0.1</p></h1>
+<h2 class="second"><p>opacity 0.3</p></h2>
+<h3 class="third"><p>opacity 0.6</p></h3>
 </body>
 </html>
 
