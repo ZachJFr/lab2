@@ -1,135 +1,24 @@
 <!DOCTYPE html>
 <html>
-<body>
-<Style>
-p {outline-color:red;}
-
-p.dotted {outline-style: dotted;}
-p.dashed {outline-style: dashed;}
-p.solid {outline-style: solid;}
-p.double {outline-style: double;}
-p.groove {outline-style: groove;}
-p.ridge {outline-style: ridge;}
-p.inset {outline-style: inset;}
-p.outset {outline-style: outset;}
-
-body {
-  background-image: url("gradient_bg.png");
-  background-repeat: repeat-x;
-  background-position: right top;
-  margin-right: 200px;
-  background-attachment: scroll;
+<head>
+<style>
+p.a {
+  font: 20px Arial, sans-serif;
 }
 
-div {
-  background-color: lightgrey;
-  width: 300px;
-  border: 15px solid green;
-  padding: 50px;
-  margin: 20px;
-}
-
-div.ex1 {
-  width: 500px;
-  margin: auto;
-  border: 3px solid #73AD21;
-}
-
-div.ex2 {
-  max-width: 500px;
-  margin: auto;
-  border: 3px solid #73AD21;
-}
-
-p.ex3 {
-  border: 1px solid black;
-  outline-style: solid;
-  outline-color: red;
-  outline-width: thick;
-}
-
-p.ex4 {
-  border: 2px solid black;
-  outline-style: outset;
-  outline-color: grey;
-}
-p {
-  margin: 30px;
-  background:yellow;
-  border: 1px solid black;
-  outline: 1px solid red;
-  outline-offset: 15px;
-}
-
-h1 {
-  text-shadow: 2px 2px red;
-  text-align: justify;
-  background-color: black;
-  color: white;
-}
-
-p.ex5 {
-	outline: thick ridge pink;
-}
-h2 {
-  margin: 0 0 50px 0;
-}
-
-h3 {
-  direction: rtl;
-  unicode-bidi: bidi-override;
-}
-
-h3 {
-  height: 200px;
-  width: 50%;
-  background-color: powderblue;
-}
-h4.ex1 {
-  direction: rtl;
-  unicode-bidi: bidi-override;
-  text-decoration: line-through;
-  text-transform: capitalize;
-}
-
-p.small {
-  line-height: 0.7;
+p.b {
+  font: italic bold 12px/30px Georgia, serif;
 }
 </style>
 </head>
+<body>
 
-<h1 style="color:Tomato;">Hello World</h1>
+<h1>The font Property</h1>
 
-<h1>Heading 1</h1>
-<h2>Heading 2</h2>
+<p class="a">This is a paragraph. The font size is set to 20 pixels, and the font family is Arial.</p>
 
-<div>Zach Justin A. Francia from BSCS-SF211</div>
-<p style="color:DodgerBlue;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-<div>NICKNAME: ZACH</div>
-<p style="color:Green;">Leaves will soon grow from the bareness of trees and all will be alright in time from waves overgrown come the calmest of seas and all will be alright in time</p>
-<div>FROM: DARAGA, ALBAY</div>
-<p style="color:MediumSeaGreen;">Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-<div>HOBBIES: PLAYING BASKETBALL AND VIDEO GAMES</div>
+<p class="b">This is a paragraph. The font is set to italic and bold, the font size is set to 12 pixels, the line height is set to 30 pixels, and the font family is Georgia.</p>
 
-<div class="ex1">This div element has width: 500px;</div>
-<br>
-
-<div class="ex2">This div element has max-width: 500px;</div>
-
-<p class="dotted">A dotted outline</p>
-<p class="dashed">A dashed outline</p>
-<p class="solid">A solid outline</p>
-<p class="double">A double outline</p>
-<p class="groove">A groove outline. The effect depends on the outline-color value.</p>
-<p class="ridge">A ridge outline. The effect depends on the outline-color value.</p>
-<p class="inset">An inset outline. The effect depends on the outline-color value.</p>
-<p class="outset">An outset outline. The effect depends on the outline-color value.</p>
-<p class="ex3">A thick outline.</p>
-<p class="ex4">An outset grey outline.</p>
-<p class="ex5">A thick ridge pink outline.</p>
-<p class="small">This is a paragraph with a smaller line-height.</p>
-<p>This paragraph has an outline of 15px outside the border edge.</p>
-<h4 class="ex1"> Racecar</h4>
 </body>
 </html>
 
