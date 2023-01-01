@@ -2,6 +2,10 @@
 <html>
 <head>
 <style>
+:root {
+  --pink: #1e90ff;
+  --white: #ffffff; 
+}
 #demo {color: blue;}
 h5.test {color: green;} 
 [title~=flower] {
@@ -82,7 +86,7 @@ a:hover {
 
 /* selected link */
 a:active {
-  color: blue;
+  color: pink;
 }
 .button {
   background-color: #4CAF50; /* Green */
@@ -247,9 +251,12 @@ body {
   background-color: pink;
 }
 
-@media screen and (min-width: 480px) {
-  body {
-    background-color: lightgreen;
+@media screen and (min-width: 450px) {
+  .container {
+    --fontsize: 50px;
+  }
+  :root {
+    --pink: pink;
   }
 }
 #grad1 {
@@ -268,6 +275,26 @@ body {
   width: 200px;
   background-color: red; /* For browsers that do not support gradients */
   background-image: conic-gradient(red, yellow, green);
+}
+body {
+  background-color: #1e90ff;
+}
+
+h9 {
+  border-bottom: 2px solid #1e90ff;
+}
+
+.container {
+  color: #1e90ff;
+  background-color: #ffffff;
+  padding: 15px;
+}
+
+button {
+  background-color: #ffffff;
+  color: #1e90ff;
+  border: 1px solid #1e90ff;
+  padding: 5px;
 }
 #p6 {background-color:rgba(255,0,255,0.3);}
 </style>
@@ -371,6 +398,17 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh 
 <h1>Using CSS Counters</h1>
 <h2>Padded input fields</h2>
 <p id="p6">Cerise</p>
+<h1>The Traditional Way</h1>
+
+<div class="container">
+  <h9>Lorem Ipsum</h9>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit.</p>
+  <p>
+    <button>Yes</button>
+    <button>No</button>
+  </p>
+</div>
 <div class="mask1">
 <img src="https://www.w3schools.com/css/img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
 </div>
@@ -391,6 +429,7 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh 
 <p>This is a paragraph.</p>
 <p>This is another paragraph.</p>
 <h1>The transition Properties Specified One by One</h1>
+
 <p>Hover over the div element below, to see the transition effect:</p>
 <p>Hover over the div element below, to see the transition effect:</p>
 
