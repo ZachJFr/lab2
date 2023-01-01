@@ -250,6 +250,23 @@ body {
     background-color: lightgreen;
   }
 }
+#grad1 {
+  height: 200px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to right, red , yellow);
+}
+#grad2 {
+  height: 150px;
+  width: 200px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: radial-gradient(red, yellow, green);
+}
+#grad3 {
+  height: 200px;
+  width: 200px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: conic-gradient(red, yellow, green);
+}
 #p6 {background-color:rgba(255,0,255,0.3);}
 </style>
 </head>
@@ -259,6 +276,8 @@ body {
 <div class="div1">This div is smaller (width is 300px and height is 100px).</div>
 <br>
 <div class="div2">This div is bigger (width is also 300px and height is 100px).</div>
+<h1>Resize the browser window to see the effect!</h1>
+<p>The media query will only apply if the media type is screen and the viewport is 480px wide or wider.</p>
 <ul>
   <li><a href="#home">Home</a></li>
   <li><a href="#news">News</a></li>
@@ -307,6 +326,17 @@ body {
   <p>Hello World!</p>
   </div>
 </div>
+<h1>Linear Gradient - Left to Right</h1>
+<p>This linear gradient starts red at the left, transitioning to yellow (to the right):</p>
+
+<div id="grad1"></div>
+
+<h1>Radial Gradient - Evenly Spaced Color Stops</h1>
+
+<div id="grad2"></div>
+<h1>Conic Gradient - Three Colors</h1>
+
+<div id="grad3"></div>
 <div class="newspaper">
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. 
 </div>
