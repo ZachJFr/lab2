@@ -7,6 +7,15 @@ h5.test {color: green;}
 [title~=flower] {
   border: 5px solid yellow;
 }
+#rcorners3 {
+  border-radius: 25px;
+  background: url(paper.gif);
+  background-position: left top;
+  background-repeat: repeat;
+  padding: 20px; 
+  width: 200px;
+  height: 150px;  
+}
 div > p {
   background-color: yellow;
 }
@@ -15,7 +24,26 @@ div > p {
   height: 44px;
   background: url(https://www.w3schools.com/css/img_trans.gif) 0 0;
 }
+.header {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+}
+body {
+  counter-reset: section;
+}
+h1 {
+  font-size: 60px;
+}
 
+p {
+  font-size: 25px;
+  line-height: 50px;
+}
+h2::before {
+  counter-increment: section;
+  content: "Section " counter(section) ": ";
+}
 #next {
   width: 43px;
   height: 44px;
@@ -28,7 +56,7 @@ h3::first-line {
 a:link {
   color: red;
 }
-
+h5 {color: red;} 
 /* visited link */
 a:visited {
   color: green;
@@ -43,14 +71,38 @@ a:hover {
 a:active {
   color: blue;
 }
+.button {
+  background-color: #8c8c8c; 
+  color: white;
+  padding: 5px;
+  border: 1px solid black; 
+}
+#div1 {
+  background-color: pink;
+  height: 100px;
+  width: min(50%, 300px);
+}
+#borderimg { 
+  border: 10px solid transparent;
+  padding: 15px;
+  border-image: url(border.png) 30 round;
+}
 </style>
 </head>
 <body>
+<p id="rcorners3">Rounded corners!</p>
+<p>Standard button: <a class="button" href="default.asp">CSS Tutorial</a></p>
 
+<p>Standard button: <a class="button" href="/html/">HTML Tutorial</a></p>
+
+<div class="header">
+  <h1>Header</h1>
+</div>
 <h2>Child Selector</h2>
 
 <p>The child selector (>) selects all elements that are the children of a specified element.</p>
-
+<p>Here, the middle sections of the image are repeated to create the border:</p>
+<p id="borderimg">border-image: url(border.png) 30 round;</p>
 <div>
   <p>Paragraph 1 in the div.</p>
   <p>Paragraph 2 in the div.</p>
@@ -60,7 +112,7 @@ a:active {
   </section>
   <p>Paragraph 4 in the div.</p>
 </div>
-
+<div id="div1">Some text...</div>
 <p>Paragraph 5. Not in a div.</p>
 <p>Paragraph 6. Not in a div.</p>
 <h2>Styling a link depending on state</h2>
@@ -75,6 +127,18 @@ a:active {
 <h5 id="demo" class="test">Hello World!</h5>
 <img id="home" src="https://www.w3schools.com/css/img_trans.gif" width="1" height="1">
 <img id="next" src="https://www.w3schools.com/css/img_trans.gif" width="1" height="1">
+<h1>Using CSS Counters</h1>
+
+<h2>HTML Tutorial</h2>
+<h2>CSS Tutorial</h2>
+<h2>JavaScript Tutorial</h2>
+<h2>Python Tutorial</h2>
+<h2>SQL Tutorial</h2>
+<h1>This is heading 1</h1>
+<h2>This is heading 2</h2>
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+<h5>COLOR RED!</h5>
 </body>
 </html>
 
