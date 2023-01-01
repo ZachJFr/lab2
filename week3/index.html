@@ -56,11 +56,23 @@ h3::first-line {
 a:link {
   color: red;
 }
-h5 {color: red;} 
-/* visited link */
-a:visited {
+body {
   color: green;
 }
+
+h7 { 
+  box-shadow: 0px 0px 15px currentcolor;
+  border: 5px solid currentcolor;
+  padding: 15px;
+}
+p.test2 {
+  white-space: nowrap; 
+  width: 200px; 
+  border: 1px solid #000000;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 
 /* mouse over link */
 a:hover {
@@ -72,15 +84,32 @@ a:active {
   color: blue;
 }
 .button {
-  background-color: #8c8c8c; 
+  background-color: #4CAF50; /* Green */
+  border: none;
   color: white;
-  padding: 5px;
-  border: 1px solid black; 
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
 }
 #div1 {
   background-color: pink;
   height: 100px;
   width: min(50%, 300px);
+}
+.div1 {
+  width: 300px;
+  height: 100px;
+  border: 1px solid blue;
+}
+
+.div2 {
+  width: 300px;
+  height: 100px;
+  padding: 50px;
+  border: 1px solid red;
 }
 #borderimg { 
   border: 10px solid transparent;
@@ -112,13 +141,36 @@ li a {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+@font-face {
+   font-family: myFirstFont;
+   src: url(sansation_light.woff);
+}
 div.gallery {
   margin: 5px;
   border: 1px solid #ccc;
   float: left;
   width: 180px;
 }
+h8 {
+  width: 300px;
+  height: 100px;
+  background-color: yellow;
+  border: 1px solid black;
+}
+div {
+  border: 2px solid;
+  padding: 20px; 
+  width: 300px;
+  resize: horizontal;
+  overflow: auto;
+}
 
+#myDiv {
+  transform: rotateY(150deg);
+}
+h8#myDiv {
+  transform: rotate(20deg);
+}
 div.gallery:hover {
   border: 1px solid #777;
 }
@@ -138,9 +190,75 @@ input[type=text] {
   margin: 8px 0;
   box-sizing: border-box;
 }
+div {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition-property: width;
+  transition-duration: 2s;
+  transition-timing-function: linear;
+  transition-delay: 1s;
+}
+div:hover {
+  width: 300px;
+}
+div {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 2s, height 4s;
+}
+
+div:hover {
+  width: 300px;
+  height: 300px;
+}
+img {
+  border-radius: 8px;
+  -webkit-box-reflect: right;
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  object-position: 15% 100%;
+}
+.mask1 {
+  -webkit-mask-image: url(w3logo.png);
+  mask-image: url(w3logo.png);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;    
+}
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+.newspaper {
+  column-count: 3;
+  column-gap: 40px;
+}
+body {
+  background-color: pink;
+}
+
+@media screen and (min-width: 480px) {
+  body {
+    background-color: lightgreen;
+  }
+}
+#p6 {background-color:rgba(255,0,255,0.3);}
 </style>
 </head>
 <body>
+<h2>text-overflow: ellipsis:</h2>
+<p class="test2">This is some long text that will not fit in the box</p>
+<div class="div1">This div is smaller (width is 300px and height is 100px).</div>
+<br>
+<div class="div2">This div is bigger (width is also 300px and height is 100px).</div>
 <ul>
   <li><a href="#home">Home</a></li>
   <li><a href="#news">News</a></li>
@@ -151,7 +269,12 @@ input[type=text] {
 <p>Standard button: <a class="button" href="default.asp">CSS Tutorial</a></p>
 
 <p>Standard button: <a class="button" href="/html/">HTML Tutorial</a></p>
+<h2>CSS Buttons</h2>
 
+<button>Default Button</button>
+<a href="#" class="button">Link Button</a>
+<button class="button">Button</button>
+<input type="button" class="button" value="Input Button">
 <div class="header">
   <h1>Header</h1>
 </div>
@@ -162,6 +285,7 @@ input[type=text] {
   </a>
   <div class="desc">Add a description of the image here</div>
 </div>
+<h1>The @font-face Rule</h1>
 <p>The child selector (>) selects all elements that are the children of a specified element.</p>
 <p>Here, the middle sections of the image are repeated to create the border:</p>
 <p id="borderimg">border-image: url(border.png) 30 round;</p>
@@ -183,7 +307,20 @@ input[type=text] {
   <p>Hello World!</p>
   </div>
 </div>
+<div class="newspaper">
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. 
+</div>
 <div id="div1">Some text...</div>
+<div class="pagination">
+  <a href="#">&laquo;</a>
+  <a href="#">1</a>
+  <a href="#">2</a>
+  <a href="#">3</a>
+  <a href="#">4</a>
+  <a href="#">5</a>
+  <a href="#">6</a>
+  <a href="#">&raquo;</a>
+</div>
 <p>Paragraph 5. Not in a div.</p>
 <p>Paragraph 6. Not in a div.</p>
 <h2>Styling a link depending on state</h2>
@@ -200,13 +337,17 @@ input[type=text] {
 <img id="next" src="https://www.w3schools.com/css/img_trans.gif" width="1" height="1">
 <h1>Using CSS Counters</h1>
 <h2>Padded input fields</h2>
-
+<p id="p6">Cerise</p>
+<div class="mask1">
+<img src="https://www.w3schools.com/css/img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
+</div>
 <form>
   <label for="fname">First Name</label>
   <input type="text" id="fname" name="fname">
   <label for="lname">Last Name</label>
   <input type="text" id="lname" name="lname">
 </form>
+<img src="https://www.w3schools.com/css/paris.jpg" alt="Paris" width="300" height="300">
 <h2>HTML Tutorial</h2>
 <h2>CSS Tutorial</h2>
 <h2>JavaScript Tutorial</h2>
@@ -216,7 +357,27 @@ input[type=text] {
 <h2>This is heading 2</h2>
 <p>This is a paragraph.</p>
 <p>This is another paragraph.</p>
+<h1>The transition Properties Specified One by One</h1>
+<p>Hover over the div element below, to see the transition effect:</p>
+<p>Hover over the div element below, to see the transition effect:</p>
+
+<div></div>
+
+<p><b>Note:</b> The transition effect has a 1 second delay before starting.</p>
 <h5>COLOR RED!</h5>
+<div>
+<h7>This div's border color and shadow color is set to the current color value of the body element.</h7>
+</div>
+<h8 id="myDiv">
+This div element is rotated clockwise 20 degrees.
+</h8>
+<div id="myDiv">
+This div element is rotated 150 degrees.
+<div>
+  <p>Let the user resize only the width of this div element.</p>
+  <p>To resize: Click and drag the bottom right corner of this div element.</p>
+</div>
+</div>
 </body>
 </html>
 
