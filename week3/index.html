@@ -2,454 +2,77 @@
 <html>
 <head>
 <style>
-:root {
-  --pink: #1e90ff;
-  --white: #ffffff; 
-}
-#demo {color: blue;}
-h5.test {color: green;} 
-[title~=flower] {
-  border: 5px solid yellow;
-}
-#rcorners3 {
-  border-radius: 25px;
-  background: url(paper.gif);
-  background-position: left top;
-  background-repeat: repeat;
-  padding: 20px; 
-  width: 200px;
-  height: 150px;  
-}
-div > p {
-  background-color: yellow;
-}
-#home {
-  width: 46px;
-  height: 44px;
-  background: url(https://www.w3schools.com/css/img_trans.gif) 0 0;
-}
-.header {
-  background-color: #f1f1f1;
-  padding: 20px;
-  text-align: center;
-}
-body {
-  counter-reset: section;
-}
-h1 {
-  font-size: 60px;
-  text-shadow: 2px 2px;
-}
-
-p {
-  font-size: 25px;
-  line-height: 50px;
-}
-h2::before {
-  counter-increment: section;
-  content: "Section " counter(section) ": ";
-}
-#next {
-  width: 43px;
-  height: 44px;
-  background: url(https://www.w3schools.com/css/img_trans.gif) -91px 0;
-}
-h3::first-line {
-  color: #ff0000;
-  font-variant: small-caps;
-}
-a:link {
-  color: red;
-}
-body {
-  color: green;
-}
-
-h7 { 
-  box-shadow: 0px 0px 15px currentcolor;
-  border: 5px solid currentcolor;
-  padding: 15px;
-}
-p.test2 {
-  white-space: nowrap; 
-  width: 200px; 
-  border: 1px solid #000000;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-
-/* mouse over link */
-a:hover {
-  color: hotpink;
-}
-
-/* selected link */
-a:active {
-  color: pink;
-}
-.button {
-  background-color: #4CAF50; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-}
-}
-#div1 {
-  box-shadow: 10px 10px;
-  background-color: pink;
-  height: 100px;
-  width: min(50%, 300px);
-}
-.div1 {
-  width: 300px;
-  height: 100px;
-  border: 1px solid blue;
-}
-
-.div2 {
-  width: 300px;
-  height: 100px;
-  padding: 50px;
-  border: 1px solid red;
-}
-#borderimg { 
-  border: 10px solid transparent;
-  padding: 15px;
-  border-image: url(border.png) 30 round;
-}
-li {
-  float: left;
-}
-li a {
-  display: block;
-  width: 60px;
-}
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  padding: 12px 16px;
-  z-index: 1;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-@font-face {
-   font-family: myFirstFont;
-   src: url(sansation_light.woff);
-}
-div.gallery {
-  margin: 5px;
-  border: 1px solid #ccc;
-  float: left;
-  width: 180px;
-}
-h8 {
-  width: 300px;
-  height: 100px;
-  background-color: yellow;
-  border: 1px solid black;
-}
-div {
-  border: 2px solid;
-  padding: 20px; 
-  width: 300px;
-  resize: horizontal;
-  overflow: auto;
-}
-
-#myDiv {
-  transform: rotateY(150deg);
-}
-h8#myDiv {
-  transform: rotate(20deg);
-}
-div.gallery:hover {
-  border: 1px solid #777;
-}
-
-div.gallery img {
-  width: 100%;
-  height: auto;
-}
-
-div.desc {
-  padding: 15px;
-  text-align: center;
-}
-input[type=text] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
+* {
   box-sizing: border-box;
 }
-div {
-  width: 100px;
-  height: 100px;
-  background: red;
-  transition-property: width;
-  transition-duration: 2s;
-  transition-timing-function: linear;
-  transition-delay: 1s;
-}
-div:hover {
-  width: 300px;
-}
-div {
-  width: 100px;
-  height: 100px;
-  background: red;
-  transition: width 2s, height 4s;
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  font-size: 30px;
+  text-align: center;
 }
 
-div:hover {
-  width: 300px;
-  height: 300px;
-}
-img {
-  border-radius: 8px;
-  -webkit-box-reflect: right;
-  width: 200px;
-  height: 300px;
-  object-fit: cover;
-  object-position: 15% 100%;
-}
-.mask1 {
-  -webkit-mask-image: url(w3logo.png);
-  mask-image: url(w3logo.png);
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;    
-}
-.pagination {
-  display: inline-block;
+.flex-item-left {
+  background-color: #f1f1f1;
+  padding: 10px;
+  flex: 50%;
 }
 
-.pagination a {
-  color: black;
-  float: left;
-  padding: 8px 16px;
-  text-decoration: none;
+.flex-item-right {
+  background-color: dodgerblue;
+  padding: 10px;
+  flex: 50%;
 }
-.newspaper {
-  column-count: 3;
-  column-gap: 40px;
-}
-body {
-  background-color: pink;
-}
-
-@media screen and (min-width: 450px) {
-  .container {
-    --fontsize: 50px;
-  }
-  :root {
-    --pink: pink;
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
   }
 }
-#grad1 {
-  height: 200px;
-  background-color: red; /* For browsers that do not support gradients */
-  background-image: linear-gradient(to right, red , yellow);
-}
-#grad2 {
-  height: 150px;
-  width: 200px;
-  background-color: red; /* For browsers that do not support gradients */
-  background-image: radial-gradient(red, yellow, green);
-}
-#grad3 {
-  height: 200px;
-  width: 200px;
-  background-color: red; /* For browsers that do not support gradients */
-  background-image: conic-gradient(red, yellow, green);
-}
-body {
-  background-color: #1e90ff;
-}
-
-h9 {
-  border-bottom: 2px solid #1e90ff;
-}
-
-.container {
-  color: #1e90ff;
-  background-color: #ffffff;
-  padding: 15px;
-}
-
-button {
-  background-color: #ffffff;
-  color: #1e90ff;
-  border: 1px solid #1e90ff;
-  padding: 5px;
-}
-#p6 {background-color:rgba(255,0,255,0.3);}
 </style>
 </head>
 <body>
-<h2>text-overflow: ellipsis:</h2>
-<div>This is a div element with a box-shadow</div>
-<p class="test2">This is some long text that will not fit in the box</p>
-<div class="div1">This div is smaller (width is 300px and height is 100px).</div>
-<br>
-<div class="div2">This div is bigger (width is also 300px and height is 100px).</div>
-<h1>Resize the browser window to see the effect!</h1>
-<p>The media query will only apply if the media type is screen and the viewport is 480px wide or wider.</p>
-<ul>
-  <li><a href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#about">About</a></li>
-</ul>
-<p id="rcorners3">Rounded corners!</p>
-<p>Standard button: <a class="button" href="default.asp">CSS Tutorial</a></p>
+<h1>Flexible Boxes</h1>
 
-<p>Standard button: <a class="button" href="/html/">HTML Tutorial</a></p>
-<h2>CSS Buttons</h2>
-
-<button>Default Button</button>
-<a href="#" class="button">Link Button</a>
-<button class="button">Button</button>
-<input type="button" class="button" value="Input Button">
-<div class="header">
-  <h1>Header</h1>
+<div class="flex-container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>  
+  <div>7</div>
+  <div>8</div>
 </div>
-<h2>Child Selector</h2>
-<div class="gallery">
-  <a target="_blank" href="img_5terre.jpg">
-    <img src="https://www.w3schools.com/css/img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
-  </a>
-  <div class="desc">Add a description of the image here</div>
-</div>
-<h1>The @font-face Rule</h1>
-<p>The child selector (>) selects all elements that are the children of a specified element.</p>
-<p>Here, the middle sections of the image are repeated to create the border:</p>
-<p id="borderimg">border-image: url(border.png) 30 round;</p>
-<div>
-  <p>Paragraph 1 in the div.</p>
-  <p>Paragraph 2 in the div.</p>
-  <section>
-    <!-- not Child but Descendant -->
-    <p>Paragraph 3 in the div (inside a section element).</p>
-  </section>
-  <p>Paragraph 4 in the div.</p>
-</div>
-<h2>Hoverable Dropdown</h2>
-<p>Move the mouse over the text below to open the dropdown content.</p>
 
-<div class="dropdown">
-  <span>Mouse over me</span>
-  <div class="dropdown-content">
-  <p>Hello World!</p>
-  </div>
+<p>Try to resize the browser window.</p>
+<p>A container with "flex-wrap: nowrap;" will never wrap its items.</p>
+<p><strong>Note:</strong> Flexbox is not supported in Internet Explorer 10 or earlier versions.</p>
+
+<div class="flex-container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
 </div>
-<h1>Linear Gradient - Left to Right</h1>
-<p>This linear gradient starts red at the left, transitioning to yellow (to the right):</p>
 
-<div id="grad1"></div>
+<p>A Flexible Layout must have a parent element with the <em>display</em> property set to <em>flex</em>.</p>
 
-<h1>Radial Gradient - Evenly Spaced Color Stops</h1>
+<p>Direct child elements(s) of the flexible container automatically becomes flexible items.</p>
 
-<div id="grad2"></div>
-<h1>Conic Gradient - Three Colors</h1>
+<p>Use the order property to sort the flex items as you like:</p>
 
-<div id="grad3"></div>
-<div class="newspaper">
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. 
+<div class="flex-container">
+  <div style="order: 3">1</div>
+  <div style="order: 2">2</div>
+  <div style="order: 4">3</div> 
+  <div style="order: 1">4</div>
+  
 </div>
-<div id="div1">Some text...</div>
-<div class="pagination">
-  <a href="#">&laquo;</a>
-  <a href="#">1</a>
-  <a href="#">2</a>
-  <a href="#">3</a>
-  <a href="#">4</a>
-  <a href="#">5</a>
-  <a href="#">6</a>
-  <a href="#">&raquo;</a>
-</div>
-<p>Paragraph 5. Not in a div.</p>
-<p>Paragraph 6. Not in a div.</p>
-<h2>Styling a link depending on state</h2>
-<h3>You can use the ::first-line pseudo-element to add a special effect to the first line of a text. Some more text. And even more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more.</h3>
-<p><b><a href="default.asp" target="_blank">This is a link</a></b></p>
-<p><b>Note:</b> a:hover MUST come after a:link and a:visited in the CSS definition in order to be effective.</p>
-<p><b>Note:</b> a:active MUST come after a:hover in the CSS definition in order to be effective.</p>
-<h4>All images with the title attribute containing the word "flower" get a yellow border.</h4>
-<img src="https://www.w3schools.com/css/klematis.jpg" title="klematis flower" width="150" height="113">
-<img src="https://www.w3schools.com/css/img_flwr.gif" title="flower" width="224" height="162">
-<img src="https://www.w3schools.com/css/img_tree.gif" title="tree" width="200" height="358">
-<h5 id="demo" class="test">Hello World!</h5>
-<img id="home" src="https://www.w3schools.com/css/img_trans.gif" width="1" height="1">
-<img id="next" src="https://www.w3schools.com/css/img_trans.gif" width="1" height="1">
-<h1>Using CSS Counters</h1>
-<h2>Padded input fields</h2>
-<p id="p6">Cerise</p>
-<h1>The Traditional Way</h1>
-
-<div class="container">
-  <h9>Lorem Ipsum</h9>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit.</p>
-  <p>
-    <button>Yes</button>
-    <button>No</button>
-  </p>
-</div>
-<div class="mask1">
-<img src="https://www.w3schools.com/css/img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
-</div>
-<form>
-  <label for="fname">First Name</label>
-  <input type="text" id="fname" name="fname">
-  <label for="lname">Last Name</label>
-  <input type="text" id="lname" name="lname">
-</form>
-<img src="https://www.w3schools.com/css/paris.jpg" alt="Paris" width="300" height="300">
-<h2>HTML Tutorial</h2>
-<h2>CSS Tutorial</h2>
-<h2>JavaScript Tutorial</h2>
-<h2>Python Tutorial</h2>
-<h2>SQL Tutorial</h2>
-<h1>This is heading 1</h1>
-<h2>This is heading 2</h2>
-<p>This is a paragraph.</p>
-<p>This is another paragraph.</p>
-<h1>The transition Properties Specified One by One</h1>
-
-<p>Hover over the div element below, to see the transition effect:</p>
-<p>Hover over the div element below, to see the transition effect:</p>
-
-<div></div>
-
-<p><b>Note:</b> The transition effect has a 1 second delay before starting.</p>
-<h5>COLOR RED!</h5>
-<div>
-<h7>This div's border color and shadow color is set to the current color value of the body element.</h7>
-</div>
-<h8 id="myDiv">
-This div element is rotated clockwise 20 degrees.
-</h8>
-<div id="myDiv">
-This div element is rotated 150 degrees.
-<div>
-  <p>Let the user resize only the width of this div element.</p>
-  <p>To resize: Click and drag the bottom right corner of this div element.</p>
-</div>
+  <div class="flex-container">
+  <div style="flex-grow: 1">1</div>
+  <div style="flex-grow: 1">2</div>
+  <div style="flex-grow: 8">3</div>
 </div>
 </body>
 </html>
-
