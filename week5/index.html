@@ -1,1 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+#grad1 {
+  height: 200px;
+  background-color: pink; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to top right, pink, rgb(212, 117, 117));
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color:pink;
+}
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  text-align: center;
+  background: white;
+}
+
+.header h1 {
+  font-size: 50px;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: rgb(0, 0, 0);
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+/* DROPDOWNS */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+div.shape {
+  width: 150px;
+  height: 150px;
+  background-color: red;
+  position: relative;
+  animation-name: example;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+}
+
+<html>
+<head>
+<style>
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.pagination a:hover:not(.active) {background-color: pink;}
+@keyframes example {
+  0%   {background-color:pink; left:0px; top:0px;}
+  25%  {background-color:rgb(155, 51, 70); left:200px; top:0px;}
+  50%  {background-color:rgb(0, 0, 0); left:200px; top:200px;}
+  75%  {background-color:rgb(146, 53, 68); left:0px; top:200px;}
+  100% {background-color:pink; left:0px; top:0px;}
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+    <div id="grad1">
+        <h1 style="color:black;font-size:70px;text-align: center;" >All About Me</h1>
+    </div>
+</div>
+
+<ul>
+    <li><a href="https://www.youtube.com/watch?v=PjrAwC4TIPA" style="font-size:20px;">Home</a></li>
+    <li><a href="#news" style="font-size:20px;">News</a></li>
+    <li><a href="https://www.facebook.com/zachfrancia.11/" style="font-size:20px;">Contact</a></li>
+    <li><a href="https://www.youtube.com/watch?v=CuipunzCM_U" style="font-size:20px;">About</a></li>
+  </ul>
+
+<div class="row">
+    
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>Jordan 1 Lost and Found</h2>
+      <h5>A shoe that I own</h5>
+      <div> 
+        <img src="https://i.pinimg.com/564x/20/1e/94/201e94013060518ff1904c1a6952b5b8.jpg" alt="J1 Lost and Found">
+      </div>
+      <p>9,895.00</p>
+      <p>"Finders keepers! Celebrating the thrill of the vintage score, the AJ1 'Chicago' reunites you with a classic colourway that's gone through a bit of a journey. From the weathered box (look at those throwback ads) to the cracked leather accents, these kicks deliver big on original '80s vibes. No detail is overlooked—an "old, hand-written" receipt is paired with an aged Sail midsole, letting you step back to the beginning of the hoops revolution."</p>
+    </div>
+    <div class="card">
+      <h2>Kobe 8 Challenge Red</h2>
+      <h5>Best Shoe I had worn</h5>
+      <div>
+        <img src="https://i.pinimg.com/564x/0f/e8/1c/0fe81c97eb1cddc3ff7e6df6f7a47029.jpg" alt="J1 Lost and Found">
+      </div>
+      <p>8,000.00</p>
+      <p>Colorway - CHALLENGE RED/REFLECTIVE SILVER-TEAM ORANGE-ELECTRO ORANGE
+        Release Date - 06/15/2013 </p>
+    </div>
+    <div class="card">
+        <h2>Kpop Group That I Like</h2>
+        <h5>Blackpink</h5>
+        <div>
+            <img src="https://i.pinimg.com/564x/0f/85/51/0f8551af2a5fe750c5da13e655a3c141.jpg" alt="J1 Lost and Found">
+        </div>
+        <p>OT4</p>
+        <div class="card">
+            <h2>Blackpink Bias</h2>
+            <div class="dropdown">
+                <span>Hover mouse over me to know my Blackpink bias</span>
+                <div class="dropdown-content">
+                <p style="color:rgb(0, 0, 0);text-align: center;font-size: 50px;text-transform:capitalize";> Jisoo </p>
+                  <img src="https://i.pinimg.com/564x/b5/10/24/b51024a72e95f71fc384d6bc621cf753.jpg" alt="Jisoo">
+                </div>
+              </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>Hometown</h2>
+      <div>
+        <img src="https://scontent.fmnl4-5.fna.fbcdn.net/v/t1.6435-9/56564607_10213895513008420_6411813851355938816_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeH6YKG1wDyqtFCQVfx7wEZvFsfXxHaYjdIWx9fEdpiN0pEj-7oArAbskmVU70rLcr4m3cvXMd41YXxWfTdjU54I&_nc_ohc=BbgZzsOkyXkAX_QPhJ8&_nc_ht=scontent.fmnl4-5.fna&oh=00_AfC4_vvX-YXr35O50q2VxhGqcbDA3RSO0xSPXm5V2hiOng&oe=63DF4D3A" alt="Mayon">
+      </div>
+      <p>Albay</p>
+      <p>April 8, 2019</p>
+    </div>
+    <div class="card">
+      <h3>Random Gifs</h3>
+      <div>
+        <p style=" font-size: 30; text-align: justify;">Nba player I idolize</p>
+        <img src="https://media0.giphy.com/media/KPfkwDtE0fBKkJVYyN/giphy.gif?cid=ecf05e47d5lkrhozv8gbkqui5dwr19mc7r6bok40uoyrkbnj&rid=giphy.gif&ct=g" alt="Steph" height="300px" width="600px">
+    </div>
+      <div>
+        <p style=" font-size: 30; text-align: justify;">When there are 10 assignment tabs</p>
+        <img src="https://media.tenor.com/MYZgsN2TDJAAAAAC/this-is.gif" alt="Fine" height="300px" width="600px">
+    </div>
+      <div>
+        <p style=" font-size: 30; text-align: justify;">Nba player I idolize</p>
+        <img src="https://media0.giphy.com/media/KPfkwDtE0fBKkJVYyN/giphy.gif?cid=ecf05e47d5lkrhozv8gbkqui5dwr19mc7r6bok40uoyrkbnj&rid=giphy.gif&ct=g" alt="Steph">
+      </div>
+
+    </div>
+    <div class="card">
+      <h3>Follow Me</h3>
+      <p>Some text..</p>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="footer" style="text-align: center;">
+    <div id="grad1"></div>
+</div>
+
+<div class="pagination">
+    <a href="#">&laquo;</a>
+    <a class="active" href="#">1</a>
+    <a href="#">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+    <a href="#">5</a>
+    <a href="#">6</a>
+    <a href="#">&raquo;</a>
+  </div>
+
+</body>
+</html>
+
 
