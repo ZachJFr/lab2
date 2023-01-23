@@ -270,7 +270,12 @@ div.shape {
       <div> 
         <img style="border: 5px double black;" src="https://i.pinimg.com/564x/20/1e/94/201e94013060518ff1904c1a6952b5b8.jpg" alt="J1 Lost and Found">
       </div>
-      <p>9,895.00</p>
+      <p id="cost"></p>
+
+      <script>
+      document.getElementById("cost").innerHTML =
+      Math.floor(Math.random() * 10000);
+      </script>
       <p>"Finders keepers! Celebrating the thrill of the vintage score, the AJ1 'Chicago' reunites you with a classic colourway that's gone through a bit of a journey. From the weathered box (look at those throwback ads) to the cracked leather accents, these kicks deliver big on original '80s vibes. No detail is overlooked—an "old, hand-written" receipt is paired with an aged Sail midsole, letting you step back to the beginning of the hoops revolution."</p>
     </div>
     <div class="card">
@@ -324,7 +329,10 @@ function myTimer() {
   const d = new Date();
   document.getElementById("demo").innerHTML = d.toLocaleTimeString();
 }
+
+
 </script>
+
 
 </body>
 </html>
