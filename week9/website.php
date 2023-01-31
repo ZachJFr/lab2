@@ -2,7 +2,6 @@
 <html>
 <head>
 <style>
-    .error {color: #FF0000;}
 * {
   box-sizing: border-box;
 }
@@ -422,6 +421,25 @@ function myTimer() {
             Check Credits
           </button>
         </a>
+        </button>
+      </a>
+      <h3>Forms</h1>
+        <a href="http://apcwebprog.csf.ph/~zafrancia/lab2/week9/validation_complete.php" target="_blank">
+          <button
+            style="
+              background-color: pink;
+              color: rgb(0, 0, 0);
+              border-radius: 8px;
+              height: 50px;
+              width: 200px;
+              font-size: 18px;
+              font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
+                sans-serif;
+            "
+          >
+            Forms Validation
+        </a>
+      </a>
     </div>
   </div>
 </div>
