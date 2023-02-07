@@ -504,7 +504,7 @@ if ($conn->query($sql) === TRUE) {
 ?>
 ?>
       <h3>Validation</h3>
-        <a href="http://apcwebprog.csf.ph/~zafrancia/lab2/week9/validation_complete.php" target="_blank">
+        <a href="http://apcwebprog.csf.ph/~zafrancia/lab2/week9/mysql_select.php" target="_blank">
           <button
             style="
               background-color: pink;
@@ -517,7 +517,7 @@ if ($conn->query($sql) === TRUE) {
                 sans-serif;
             "
           >
-            Forms Validation
+            Check if Added to DB
         </a>
       </a>
     </div>
