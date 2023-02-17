@@ -502,23 +502,34 @@ if ($conn->query($sql) === TRUE) {
 }
 }
 ?>
-?>
       <h3>Validation</h3>
-        <a href="http://apcwebprog.csf.ph/~zafrancia/lab2/week9/mysql_select.php" target="_blank">
-          <button
-            style="
-              background-color: pink;
-              color: rgb(0, 0, 0);
-              border-radius: 8px;
-              height: 50px;
-              width: 200px;
-              font-size: 18px;
-              font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
-                sans-serif;
-            "
-          >
-            Check if Added to DB
-        </a>
+      <?php
+$servername = "localhost";
+$username = "webprogss211";
+$password = "webprogss211";
+$dbname = "webprogss211";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "SELECT id, name, email, website, comment, gender, reg_date FROM zafrancia_myguests";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+  // output data of each row
+  while($row = $result->fetch_assoc()) {
+    echo "id: " . $row["id"]. " - Name: " . $row["name"]. " - Email " . $row["email"]. " - Website" . $row["website"]. " - Comment" . $row["comment"]. " - Gender" . $row["gender"]. " - Reg_Date" . $row["reg_date"]."<br>" ;
+  }
+} else {
+  echo "0 results";
+}
+$conn->close();
+?>
+
       </a>
     </div>
   </div>
